@@ -1,0 +1,58 @@
+<footer>
+	<div class="span12">
+  <small>
+    <a href="http://moloko.ws/">Software Development</a>
+    by Dmitri E. Molokov
+  </small>
+  <nav>
+    <ul>
+					<li>
+						<%= link_to "Электронные книги",    books_path %>
+					</li>
+					<li>
+						<%= link_to "Для детей и родителей",    kidandparentbooks_path %>
+					</li>
+					<li>
+						<%= link_to "Книги о бизнесе и для бизнеса",    businessbooks_path %>
+					</li>
+					<li>
+						<%= link_to "Специальная литература",    nonfictionliteratures_path %>
+					</li>
+					
+					
+  <% if current_user %>
+  	<li><%= link_to "Категории",    categories_path %></li>
+    <li><%= link_to "Logged in as #{current_user.email}", root_path %></li>
+    <li><%= link_to "Log Out", logout_path %></li>
+    <li><%= link_to "Sign Up", signup_path %></li>
+  <% else %>
+    
+    <li><%= link_to "Log In", login_path %></li>
+   <% end %>
+    </ul>
+  </nav>
+  </div>
+  <!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter16113466 = new Ya.Metrika({id:16113466, enableAll: true});
+        } catch(e) {}
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/16113466" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</footer>

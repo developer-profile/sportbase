@@ -1,0 +1,16 @@
+      <%= render 'sidebar' %>
+<div class="span9">
+
+<div id="products"><%= render 'products' %></div>
+
+
+<div class="digg_pagination">
+    <div clas="page_info">
+      <%= page_entries_info @books %>
+    </div>
+    <%= will_paginate @books, :container => false %>
+  </div>
+<br />
+
+<%= link_to 'New Book', new_book_path %>
+</div>

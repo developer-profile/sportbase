@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+    <%= stylesheet_link_tag    "application", :media =>"all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>    
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    
+    <div class="container-fluid">
+      <div class="row-fluid">
+      	<div class="span12">
+<%= form_tag books_path, :method => 'get', :id => "books_search", :class => "well form-search" do %>
+
+  <p>
+    <%= text_field_tag :search, params[:search], :id => "keyword", :class => "input-large search-query" %>
+    <%= submit_tag "Искать", :name => nil, :class => "btn btn-success" %>
+  </p>
+<% end %>
+</div></div>
+<div class="row-fluid">
+
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div></div> 
+
+  </body>
+</html>

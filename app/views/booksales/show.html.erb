@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @booksale.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @booksale.description %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @booksale.link %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @booksale.price %>
+</p>
+
+<p>
+  <b>Publisher:</b>
+  <%= @booksale.publisher %>
+</p>
+
+<p>
+  <b>Year:</b>
+  <%= @booksale.year %>
+</p>
+
+<p>
+  <b>Vendor:</b>
+  <%= @booksale.vendor %>
+</p>
+
+<p>
+  <b>Picture:</b>
+  <%= @booksale.picture %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @booksale.category %>
+</p>
+
+<p>
+  <b>Author:</b>
+  <%= @booksale.author %>
+</p>
+
+
+<%= link_to 'Edit', edit_booksale_path(@booksale) %> |
+<%= link_to 'Back', booksales_path %>

@@ -1,0 +1,23 @@
+<div class="span8">
+<h1>Listing books</h1>
+<%= form_tag books_path, :method => 'get', :id => "books_search" do %>
+
+  <p>
+    <%= text_field_tag :search, params[:search], :id => "keyword" %>
+    <%= submit_tag "Искать", :name => nil %>
+  </p>
+<% end %>
+
+<div id="products"><%= render 'products' %></div>
+
+
+<div class="digg_pagination">
+    <div clas="page_info">
+      <%= page_entries_info @books %>
+    </div>
+    <%= will_paginate @books, :container => false %>
+  </div>
+<br />
+
+<%= link_to 'New Book', new_book_path %>
+</div>
